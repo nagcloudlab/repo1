@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 dir('ui-app') {
-                    sh "scp -r ./build/ ubuntu@15.207.248.121:/var/www/ui-app/"
+                    sh "scp -r build/ ubuntu@15.207.248.121:/var/www/ui-app/"
                 }
             }
         }

@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <hr />
-      <h1> ui app with CI & CD devops practices</h1>
+      <h1> UI app with CI & CD devops practices</h1>
       <hr />
     </div>
   );

@@ -7,6 +7,13 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/nagcloudlab/repo1'
             }
         }
+        stage('Install dependencies') { 
+          steps {
+                dir('ui-app') {
+                    sh 'npm install'
+                }
+            }
+        }
         stage('Test') { 
             steps {
                 sh 'echo "test"'

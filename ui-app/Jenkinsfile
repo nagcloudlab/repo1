@@ -28,7 +28,9 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                input 'need to deploy?'
+                dir('ui-app') {
+                    sh "scp -r ./build/ ubuntu@15.207.248.121:/var/www/ui-app/"
+                }
             }
         }
     }
